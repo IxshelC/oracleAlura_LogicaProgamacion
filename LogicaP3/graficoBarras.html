@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraficoBarras</title>
+</head>
+
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+
+        function dibujarRectangulo(x, y, base, altura, color) {                     //Función Para dibujar el Rectangulo
+            var pantalla = document.querySelector("canvas");
+            var pincel = pantalla.getContext("2d");
+
+            pincel.fillStyle = color;
+            pincel.fillRect(x, y, base, altura);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x, y, base, altura);
+        }
+
+        function escribirTexto(x, y, texto) {                                       // Función para escribir el texto
+            var pantalla = document.querySelector("canvas");
+            var pincel = pantalla.getContext("2d");
+
+            pincel.font = "15px Georgia";
+            pincel.fillStyle = "black";
+            pincel.fillText(texto, x, y);
+        }
+
+
+        function dibujarBarra(x, y, serie, colores, texto) {                        // función para dibujar la Barra
+
+            escribirTexto(x, y - 10, texto);
+
+            var sumaAltura = 0;
+            for (var i = 0; i < serie.length; i++) {
+                var altura = serie[i];
+                dibujarRectangulo(x, y + sumaAltura, 50, altura, colores[i]);
+                sumaAltura = sumaAltura + altura;
+            }
+        }
+
+        var colores = ["blue", "green", "yellow", "red", "gray"];
+        var porcentaje2009 = [6, 47, 41, 3, 3];
+        var porcntaje2019 = [81, 9, 3, 3, 4];
+
+        dibujarBarra(50, 50, porcentaje2009, colores, "2009");
+        dibujarBarra(150, 50, porcntaje2019, colores, "2019");
+
+    </script>
+
+</body>
+
+</html>

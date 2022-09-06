@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+
+<body>
+
+    <h1>Calcular IMC</h1>
+
+    <script>
+
+        function salto() {  // Función saltar de línea
+
+            document.write("<br>")
+            document.write("<br>")
+        }
+
+        function imprimir(frase) {   // Función de imprimir edad
+
+            document.write(frase)
+            salto()
+        }
+
+
+        function calcularImc(peso, altura) {
+
+            return (peso / (altura * altura))
+
+        }
+
+        nombre = prompt("Ingresa tu nombre: ")      // Pide al usuario ingresar datos
+        pesoInformado = prompt(nombre + " Ingresa el Peso: ");
+        alturaInformado = prompt(nombre + " Ingresa la Altura: ");
+
+        imcCalculado = calcularImc(pesoInformado, alturaInformado)
+
+        imprimir("El IMC calculado de " + nombre + " es: " + imcCalculado)
+
+
+        // IF Abajo de lo recomendado
+        if (imcCalculado < 18.5) {
+            imprimir("Abajo de lo recomendado")
+        }
+
+        // If Intervalo normal
+        if (imcCalculado >= 18.5) {
+
+            if (imcCalculado <  24.9){
+
+                imprimir("Intervalo normal")
+            }
+        }
+
+        // If Sobrepeso
+        if (imcCalculado >= 25.0) {
+
+            if (imcCalculado < 29.9){
+                imprimir("Sobrepeso")
+            }
+        }
+
+        // If Obesidad
+        if (imcCalculado >= 30) {
+            imprimir("Obesidad")
+        }
+
+
+    </script>
+</body>
+
+</html>

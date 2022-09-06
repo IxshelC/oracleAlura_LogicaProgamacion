@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Programa</h1>
+
+    <script>
+
+
+        function salto() {  // Función saltar de línea
+
+            document.write("<br>")
+            document.write("<br>")
+        }
+
+        function imprimir(frase) {   // Función de imprimir edad
+
+            document.write(frase)
+            salto()
+        }
+
+
+        // Esta parte calcula la edad de Hombres
+
+        var año = 2025; // declarando variable
+
+        imprimir("Juan tiene: " + (año - 2000) + " años");
+        imprimir("Pedro tiene: " + (año - 1996) + " años");
+        imprimir("Carlos tiene: " + (año - 2005) + " años");
+
+
+        // Esta parte calcula la edad de Mujeres
+        año = 2020;
+
+        imprimir("Jimena tiene: " + (año - 2005) + " años");
+        imprimir("Paola tiene: " + (año - 1995) + " años");
+        imprimir("Tamara tiene: " + (año - 1999) + " años");
+
+
+        var edadJimena = 15;
+        var edadPaola = 25;
+        var edadTamara = 21;
+
+        var nome1 = "Jimena";
+        var nome2 = "Paola";
+        var nome3 = "Tamara";
+
+        promedio = (edadJimena + edadPaola + edadTamara) / 3
+        document.write("El promedio de las edades de: " + nome1 + ", " +
+            nome2 + ", " + nome3 + "es: " + Math.round(promedio));
+
+
+
+
+
+        /* var edad1 = 10;
+        var edad2 = 20;
+        var edad3 = 30;
+        var totalEdades = edad1 + edad2 + edad3;
+        var promedioEdades = totalEdades / 3;
+        alert("***Total de edades es " + totalEdades + "***");
+        alert("***La media de las edades es " + promedioEdades + "***"); */
+
+
+    </script>
+</body>
+
+</html>

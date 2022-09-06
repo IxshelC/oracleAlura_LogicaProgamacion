@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrellas</title>
+</head>
+
+<body>
+
+    <h1>Estrellas</h1>
+
+    <script>
+
+        function salto() {
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+
+            document.write(frase);
+            salto();
+        }
+
+        for (var filas = 1; filas <= 3; filas++) {      // Imprime 3 filas
+
+            for (var columnas = 1; columnas <= 10; columnas++){         // imprime 10 asteriscos
+                document.write("*");
+            }
+            salto();
+        }
+
+
+        imprimir("Fin")
+
+    </script>
+</body>
+
+</html>

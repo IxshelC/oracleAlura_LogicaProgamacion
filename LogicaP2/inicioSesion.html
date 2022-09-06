@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InicioSesion</title>
+</head>
+
+<body>
+    <h1>Inicio de sesión</h1>
+
+
+    <script>
+
+        var usuarioRegistrado = "alura";
+        var contraseñaRegistrada = "alura321";
+
+        var intento = 3;
+        var contador = 1;
+
+        while (contador <= intento) {
+
+            var usuarioIngresado = prompt("Ingrese su usuario");
+            var contraseñaIngresada = prompt("Ingrese su contraseña");
+
+            if (usuarioRegistrado == usuarioIngresado && contraseñaRegistrada == contraseñaIngresada) {
+                alert("Bienvenido al sistema " + usuarioIngresado);
+                break;
+            } else {
+                if (contador == 3) {
+                    alert("Agotaste el número permitido de intentos!");
+                } else {
+                    alert("Inicio de sesión inválido, intente de nuevo");
+                }
+            }
+
+            contador++;
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

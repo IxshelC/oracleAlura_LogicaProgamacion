@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+
+<body>
+
+    <h1>Calcular IMC</h1>
+
+    <script>
+
+
+        /* function salto() {  // Función saltar de línea
+
+            document.write("<br>")
+            document.write("<br>")
+        }
+
+        function imprimir(frase) {   // Función de imprimir edad
+
+            document.write(frase)
+            salto()
+        }
+
+
+        function calcularImc(peso,altura,nombre){
+
+            imc = peso / (altura + altura);
+            imprimir("El IMC calculado de "+ nombre + " es: " + imc)
+        }
+
+        // IMC IXI
+        calcularImc(60,1.58,"Ixi")
+
+        // IMC RICHI
+        calcularImc(73,1.58,"Richi") */
+
+
+
+
+        function salto() {  // Función saltar de línea
+
+            document.write("<br>")
+            document.write("<br>")
+        }
+
+        function imprimir(frase) {   // Función de imprimir edad
+
+            document.write(frase)
+            salto()
+        }
+
+
+        function calcularImc(peso,altura){
+
+            return (peso / (altura * altura))
+
+        }
+
+        nombre = prompt("Ingresa tu nombre: ")      // Pide al usuario ingresar datos
+        pesoInformado =  prompt(nombre + " Ingresa el Peso: ");
+        alturaInformado = prompt(nombre +" Ingresa la Altura: ");
+
+        imcCalculado = calcularImc(pesoInformado,alturaInformado)
+
+        imprimir("El IMC calculado de " +  nombre + " es: " + imcCalculado)
+
+
+
+
+
+/*     function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function a(numero1, numero2) {
+        return numero1 + numero2;
+    }
+
+    function b(numero1, numero2) {
+        return numero1 / numero2;
+    }
+
+    var resultado = a(10,20) + b(30,2);
+
+    mostrar(resultado);
+ */
+
+
+    </script>
+</body>
+
+</html>

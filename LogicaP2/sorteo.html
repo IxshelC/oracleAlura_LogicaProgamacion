@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Sorteo</title>
+</head>
+
+<body>
+    <script>
+
+        function saltarLinea() {
+
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+
+            document.write(frase);
+            saltarLinea();
+        }
+
+        function sortearNumero() {
+
+            return Math.round(Math.random() * 10); // numero aleatoreo del 1 al 100
+        }
+
+        var numeroPensado = sortearNumero();
+
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10: "));
+
+
+        if (numeroLanzado == numeroPensado) {   // si el número lanzadao es igual al número pensado
+
+            imprimir("Uau! Vos acertaste, pues yo pensé en el número " + numeroPensado);
+        } else {
+            var contador = 1;
+            while (contador <= 10) {    // mientras contador sea menor o igual a 10 se imprimirá 10 veces
+                imprimir("¡Se acabó, vos erraste!, el número era: " + numeroPensado);
+                contador = contador + 1;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

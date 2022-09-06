@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaraCreeper</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+
+        var pantalla = document.querySelector("canvas");
+        var cara = pantalla.getContext("2d");
+
+        // Rectangulo 1 (Cabeza)
+        cara.fillStyle = "darkgreen";
+        cara.fillRect(0,0,350,300);
+
+        // Rectangulo 2 (Ojos)
+        cara.fillStyle = "black";   // Ojo Izquierdo
+        cara.fillRect(50,40,90,90);
+
+        cara.fillStyle = "black";   // Ojo Derecho
+        cara.fillRect(210,40,90,90);
+
+        // Rectangulo 4 ( Nariz)
+        cara.fillStyle = "black";
+        cara.fillRect(140,130,70,100);
+
+        // Rectangulo 5 (Boca)
+        cara.fillStyle = "black";
+        cara.fillRect(100,190,40,110);
+
+        // Rectangulo 6 (Boca Izquierda)
+        cara.fillStyle = "black";
+        cara.fillRect(200,190,40,110);
+
+    </script>
+
+</body>
+</html>

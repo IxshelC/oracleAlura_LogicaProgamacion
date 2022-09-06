@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinación</title>
+</head>
+
+<body>
+
+    <h1>Año mundial de la FIFA</h1>
+
+    <script>
+
+        function salto() {  // Función saltar de línea
+
+            document.write("<br>")
+            document.write("<br>")
+        }
+
+
+        function imprimir(frase) {   // Función de imprimir edad
+
+            document.write(frase)
+            salto()
+        }
+
+        var añoMundial = 1930;
+        var limite = parseInt(prompt("Ingrese el año límite para calcular: "))
+        while (añoMundial <= limite){
+
+            imprimir("Hubo un mundial de la Fifa en el año " + añoMundial);
+            añoMundial = añoMundial + 4;
+
+        }
+
+        imprimir("fin");
+
+    </script>
+</body>
+
+</html>

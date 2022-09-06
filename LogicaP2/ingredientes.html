@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredientes</title>
+</head>
+
+<body>
+
+    <h1>Recetas de Armando</h1>
+
+    <script>
+        var ingredientes = [];              // Array de ingredientes
+        var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));     // pide la cantidad de ingredientes
+        var contador = 1;           //contador =1
+
+        while (contador <= cantidad) {                                                  // Mientras 1 sea menor o igual a cantidad ejecutar
+            var ingrediente = prompt("Informe el ingrediente " + contador);             // Pide al usuario que ingrese el nombre del ingreditente
+            var existe = false;                                                         // variable existe es falso
+            for (var posicion = 0; posicion < ingredientes.length; posicion++) {        // Para posicion, si es menor que ingredientes incrementa
+                if (ingredientes[posicion] == ingrediente) {                            // Si el ingrediente en la posición es igual al ingrediente
+                    existe = true;                                                      // la variable existe se vuelve verdadero
+                    alert("repetido " + ingrediente);                                   // lanzará una alerta de ingrediente repetido
+                    break;
+                }
+            }
+            if (existe == false) {                                                      // si el el ingrediente no existe
+                ingredientes.push(ingrediente);                                         // se agrega a la lista de ingredientes
+                contador++;
+            }
+        }
+        console.log(ingredientes);
+
+    </script>
+
+</body>
+
+</html>
